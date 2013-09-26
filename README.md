@@ -9,9 +9,13 @@ This is an opinionated rewrite of [Facebox](http://defunkt.github.com/facebox/).
 3. Zero images: Includes [spin.js](http://fgnass.github.io/spin.js/) instead of a gif preloader, and uses &times; (&amp;times;) as a close button
 4. Preloads displayed images with [imgpreload](https://github.com/farinspace/jquery.imgpreload)
 5. Built-in support for turbolinks
-6. Support for fully custom popup HTML
-7. Does not stay in DOM when closed
-8. Proper show/hide of overlay (no blinking when loading -> loaded)
+6. Does not stay in DOM when closed
+7. Proper show/hide of overlay (no blinking when loading -> loaded)
+8. Configurable SASS styling
+
+## List of removed Facebox features:
+
+1. Overlay opacity setting - please use CSS instead
 
 ## Installation
 

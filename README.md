@@ -28,7 +28,11 @@ Or install it yourself as:
 
 ## Usage
 
-require it in application.js.coffee:
+require it in application.js
+
+    //= require coffeebox
+
+Or require it in application.js.coffe
 
     #= require coffeebox
 
@@ -38,6 +42,15 @@ and in application.css.sass:
 
 or (sass\scss only)
 
+    // Set some options
+    $facebox-background: #fff
+    $facebox-close-color: #000
+    $facebox-close-hover: #333
+    $facebox-close-size: 25px
+    $facebox-border: 3px solid rgba(0, 0, 0, 0)
+    $facebox-border-radius: 25px
+
+    // Then import
     @import coffeebox
 
 ## Contributing

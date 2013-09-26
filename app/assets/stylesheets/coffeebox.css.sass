@@ -1,10 +1,10 @@
-$facebox-background: #fff !default
-$facebox-close-color: #000 !default
-$facebox-close-hover: #333 !default
-$facebox-close-size: 25px !default
+$coffeebox-background: #fff !default
+$coffeebox-close-color: #000 !default
+$coffeebox-close-hover: #333 !default
+$coffeebox-close-size: 25px !default
 
-$facebox-border: 3px solid rgba(0, 0, 0, 0) !default
-$facebox-border-radius: 25px !default
+$coffeebox-border: 3px solid rgba(0, 0, 0, 0) !default
+$coffeebox-border-radius: 25px !default
 
 #coffeebox
   position: absolute
@@ -18,14 +18,14 @@ $facebox-border-radius: 25px !default
     position: relative
   .popup
     position: relative
-    border: $facebox-border
-    border-radius: $facebox-border-radius
+    border: $coffeebox-border
+    border-radius: $coffeebox-border-radius
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.4)
   .content
     display: table
     padding: 10px
-    background: $facebox-backgound
-    border-radius: $facebox-border-radius
+    background: $coffeebox-backgound
+    border-radius: $coffeebox-border-radius
     min-width: 100px
     min-height: 40px
     > p
@@ -39,14 +39,14 @@ $facebox-border-radius: 25px !default
     top: 5px
     right: 5px
     padding: 2px
-    background: $facebox-background
+    background: $coffeebox-background
     font:
-      size: $facebox-close-size
+      size: $coffeebox-close-size
       weight: bold
     text-decoration: none
-    color: $facebox-close-color
+    color: $coffeebox-close-color
     &:hover
-      color: $facebox-close-hover
+      color: $coffeebox-close-hover
   .image
     text-align: center
   img

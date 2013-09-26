@@ -82,6 +82,7 @@ $.extend $.coffeebox,
     if $("#coffebox .loading").length
       $("#coffebox .loading").stopSpinner()
     init()
+    showOverlay()
     $(document).trigger "beforeReveal.coffeebox"
     $("#coffeebox .content").addClass klass if klass
     $("#coffeebox .content").empty().append data
@@ -217,6 +218,6 @@ $(document).bind "close.coffeebox", ->
   hideOverlay()
 
 # shorter alias
-$.cbox = $.coffebox
-$.fn.cbox = $.fn.coffebox
+$.cbox = $.coffeebox
+$.fn.cbox = $.fn.coffeebox
 

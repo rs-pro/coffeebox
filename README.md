@@ -6,11 +6,12 @@ This is an opinionated rewrite of [Facebox](http://defunkt.github.com/facebox/).
 
 1. Everything is converted to coffescript
 2. Shipped as a Rails 3.2/4.0 asset pipeline compatible gem
-3. Includes [spin.js](http://fgnass.github.io/spin.js/) instead of a gif preloader
-4. Preloads images with [imgpreload](https://github.com/farinspace/jquery.imgpreload)
+3. Zero images: Includes [spin.js](http://fgnass.github.io/spin.js/) instead of a gif preloader, and uses &times; as a close button
+4. Preloads displayed images with [imgpreload](https://github.com/farinspace/jquery.imgpreload)
 5. Built-in support for turbolinks
 6. Support for fully custom popup HTML
 7. Does not stay in DOM when closed
+8. Proper show/hide of overlay (no blinking when loading -> loaded)
 
 ## Installation
 
@@ -26,7 +27,7 @@ Or install it yourself as:
 
     $ gem install coffeebox
 
-## Usage
+## Loading
 
 require it in application.js
 
@@ -52,6 +53,13 @@ or (sass\scss only)
 
     // Then import
     @import coffeebox
+
+## Usage
+
+    $.coffeebox('test <b>html</b>')
+    $.coffeebox(image: 'http:://...')
+    $.cbox.loading()
+    $.cbox.close()
 
 ## Contributing
 

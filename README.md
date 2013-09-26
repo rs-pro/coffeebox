@@ -60,6 +60,8 @@ or import SASS file directly (from sass\scss only)
 
 ## Usage
 
+```$.cbox``` is just a shorter alias for ```$.coffebox```
+
 Simple:
 
     $ ->
@@ -69,8 +71,8 @@ Simple:
 
 Advanced:
 
-    $.coffeebox('test <b>html</b>')
-    $.coffeebox(image: 'http://...')
+    $.cbox('test <b>html</b>')
+    $.cbox(image: 'http://...')
     $.cbox.loading()
     $.cbox.close()
 

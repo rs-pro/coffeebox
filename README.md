@@ -33,11 +33,11 @@ Or install it yourself as:
 
 ## Loading
 
-require it in application.js
+Require it in application.js
 
     //= require coffeebox
 
-Or require it in application.js.coffe
+Or in in application.js.coffe
 
     #= require coffeebox
 
@@ -45,7 +45,7 @@ and in application.css.sass:
 
     //= require coffeebox
 
-or (sass\scss only)
+or import SASS file directly (from sass\scss only)
 
     // Set some options
     $facebox-background: #fff

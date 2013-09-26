@@ -1,3 +1,3 @@
-module Rails::Coffeebox
+module Coffeebox
   VERSION = "0.0.1"
 end

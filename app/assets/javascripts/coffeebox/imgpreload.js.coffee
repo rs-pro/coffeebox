@@ -1,36 +1,11 @@
 # v1.4 
-
-#
-#
 #Copyright (c) 2009 Dimas Begunoff, http://www.farinspace.com
 #
 #https://github.com/farinspace/jquery.imgpreload
 #
-#Licensed under the MIT license
-#http://en.wikipedia.org/wiki/MIT_License
-#
-#Permission is hereby granted, free of charge, to any person
-#obtaining a copy of this software and associated documentation
-#files (the "Software"), to deal in the Software without
-#restriction, including without limitation the rights to use,
-#copy, modify, merge, publish, distribute, sublicense, and/or sell
-#copies of the Software, and to permit persons to whom the
-#Software is furnished to do so, subject to the following
-#conditions:
-#
-#The above copyright notice and this permission notice shall be
-#included in all copies or substantial portions of the Software.
-#
-#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-#EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-#OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-#NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-#HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-#WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-#FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-#OTHER DEALINGS IN THE SOFTWARE.
-#
-#
+# Licensed under the MIT:
+#   http://www.opensource.org/licenses/mit-license.php
+
 unless "undefined" is typeof jQuery
   (($) ->
     
@@ -52,10 +27,12 @@ unless "undefined" is typeof jQuery
         $(img).bind "load error", (e) ->
           loaded.push img_obj
           $.data img_obj, "loaded", (if ("error" is e.type) then false else true)
-          settings.each.call img_obj  if settings.each instanceof Function
+          settings.each.call(img_obj) if settings.each instanceof Function
           
           # http://jsperf.com/length-in-a-variable
-          settings.all.call loaded  if loaded.length >= imgs.length and settings.all instanceof Function
+          if loaded.length >= imgs.length and settings.all instanceof Function
+            settings.all.call(loaded) 
+
           $(this).unbind "load error"
 
         img.src = url
@@ -70,60 +47,4 @@ unless "undefined" is typeof jQuery
       all: null # callback invoked when when the entire group of images has loaded
   ) jQuery
 
-#
-#
-#	Usage:
-#
-#	$('#content img').imgpreload(function()
-#	{
-#		// this = array of dom image objects
-#		// callback executes when all images are loaded
-#	});
-#
-#	$('#content img').imgpreload
-#	({
-#		each: function()
-#		{
-#			// this = dom image object
-#			// check for success with: $(this).data('loaded')
-#			// callback executes when each image loads
-#		},
-#		all: function()
-#		{
-#			// this = array of dom image objects
-#			// check for success with: $(this[i]).data('loaded')
-#			// callback executes when all images are loaded
-#		}
-#	});
-#
-#	$.imgpreload('/images/a.gif',function()
-#	{
-#		// this = array of dom image objects
-#		// check for success with: $(this[i]).data('loaded')
-#		// callback
-#	});
-#
-#	$.imgpreload(['/images/a.gif','/images/b.gif'],function()
-#	{
-#		// this = array of dom image objects
-#		// check for success with: $(this[i]).data('loaded')
-#		// callback executes when all images are loaded
-#	});
-#
-#	$.imgpreload(['/images/a.gif','/images/b.gif'],
-#	{
-#		each: function()
-#		{
-#			// this = dom image object
-#			// check for success with: $(this).data('loaded')
-#			// callback executes on every image load
-#		},
-#		all: function()
-#		{
-#			// this = array of dom image objects
-#			// check for success with: $(this[i]).data('loaded')
-#			// callback executes when all images are loaded
-#		}
-#	});
-#
-#
+

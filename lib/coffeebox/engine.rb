@@ -1,4 +1,5 @@
-module Rails::Coffeebox
+p 'eng'
+module Coffeebox
   class Engine < ::Rails::Engine
   end
 end

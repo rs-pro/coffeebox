@@ -13,7 +13,7 @@ This is an opinionated rewrite of [Facebox](http://defunkt.github.com/facebox/).
 7. Proper show/hide of overlay (no blinking when loading -> loaded)
 8. Configurable SASS styling
 
-## List of removed Facebox features:
+#### List of removed Facebox features:
 
 1. Overlay opacity setting - please use CSS instead
 

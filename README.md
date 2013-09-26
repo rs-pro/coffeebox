@@ -2,8 +2,6 @@
 
 This is an opinionated rewrite of [Facebox](http://defunkt.github.com/facebox/).
 
-# This is a work-in-progress (not yet usable)
-
 ## Features
 
 1. Everything is converted to coffescript
@@ -13,9 +11,6 @@ This is an opinionated rewrite of [Facebox](http://defunkt.github.com/facebox/).
 5. Built-in support for turbolinks
 6. Support for fully custom popup HTML
 7. Does not stay in DOM when closed
-
-## Planned features
-
 
 ## Installation
 

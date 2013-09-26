@@ -6,7 +6,7 @@ This is an opinionated rewrite of [Facebox](http://defunkt.github.com/facebox/).
 
 1. Everything is converted to coffescript
 2. Shipped as a Rails 3.2/4.0 asset pipeline compatible gem
-3. Zero images: Includes [spin.js](http://fgnass.github.io/spin.js/) instead of a gif preloader, and uses &times; as a close button
+3. Zero images: Includes [spin.js](http://fgnass.github.io/spin.js/) instead of a gif preloader, and uses &times; (&amp;times;) as a close button
 4. Preloads displayed images with [imgpreload](https://github.com/farinspace/jquery.imgpreload)
 5. Built-in support for turbolinks
 6. Support for fully custom popup HTML

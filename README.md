@@ -60,10 +60,33 @@ or import SASS file directly (from sass\scss only)
 
 ## Usage
 
+Simple:
+
+    $ ->
+      $('a[rel*=cbox]').cbox()
+
+    <a href="..." rel="cbox">test cbox</a>
+
+Advanced:
+
     $.coffeebox('test <b>html</b>')
-    $.coffeebox(image: 'http:://...')
+    $.coffeebox(image: 'http://...')
     $.cbox.loading()
     $.cbox.close()
+
+Other usage options:
+
+    $.cbox(ajax: 'remote.html')
+    $.cbox({ajax: 'remote.html'}, 'my-groovy-style')
+    $.cbox(image: 'stairs.jpg')
+    $.cbox({image: 'stairs.jpg'}, 'my-groovy-style')
+    $.cbox(div: '#box')
+    $.cbox({div: '#box'}, 'my-groovy-style')
+
+Show preloader, then replace it with content:
+
+    $.cbox ->
+      $.get 'test.htm', (data) -> $.cbox(data)
 
 ## Contributing
 

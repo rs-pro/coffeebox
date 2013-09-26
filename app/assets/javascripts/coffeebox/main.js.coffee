@@ -28,6 +28,7 @@ $.coffeebox = (data, klass) ->
   else if data.div
     fillcoffeeboxFromHref data.div, klass
   else if $.isFunction(data)
+    $.coffeebox.loading()
     data.call $
   else
     $.coffeebox.reveal data, klass

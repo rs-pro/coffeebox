@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rails-coffebox.gemspec
+# Specify your gem's dependencies in rails-coffeebox.gemspec
 gemspec

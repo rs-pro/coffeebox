@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'rails/coffebox/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "rails-coffebox"
-  spec.version       = Rails::Coffebox::VERSION
+  spec.name          = "rails-coffeebox"
+  spec.version       = Rails::Coffeebox::VERSION
   spec.authors       = ["glebtv"]
   spec.email         = ["glebtv@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{An opinionated rewrite of Facebox in coffescript bundled as a rails gem}
+  spec.summary       = %q{An opinionated rewrite of Facebox in coffescript bundled as a rails gem}
+  spec.homepage      = "https://github.com/rs-pro/coffeebox"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

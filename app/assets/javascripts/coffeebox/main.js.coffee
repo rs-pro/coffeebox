@@ -105,7 +105,7 @@ $.fn.coffeebox = (settings) ->
     klass = klass[1] if klass
     fillcoffeeboxFromHref @href, klass
     false
-  return init(settings)  if $(this).length is 0
+  return init(settings) if $(this).length is 0
   @bind "click.coffeebox", clickHandler
 
 # Private methods

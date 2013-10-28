@@ -48,12 +48,12 @@ and in application.css.sass:
 or import SASS file directly (from sass\scss only)
 
     // Set some options
-    $facebox-background: #fff
-    $facebox-close-color: #000
-    $facebox-close-hover: #333
-    $facebox-close-size: 25px
-    $facebox-border: 3px solid rgba(0, 0, 0, 0)
-    $facebox-border-radius: 25px
+    $coffeebox-background: #fff
+    coffeebox-close-color: #000
+    $coffeebox-close-hover: #333
+    $coffeebox-close-size: 25px
+    $coffeebox-border: 3px solid rgba(0, 0, 0, 0)
+    $coffeebox-border-radius: 25px
 
     // Then import
     @import coffeebox

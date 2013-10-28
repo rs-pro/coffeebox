@@ -49,7 +49,7 @@ or import SASS file directly (from sass\scss only)
 
     // Set some options
     $coffeebox-background: #fff
-    coffeebox-close-color: #000
+    $coffeebox-close-color: #000
     $coffeebox-close-hover: #333
     $coffeebox-close-size: 25px
     $coffeebox-border: 3px solid rgba(0, 0, 0, 0)

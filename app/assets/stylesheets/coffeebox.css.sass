@@ -6,18 +6,10 @@ $coffeebox-close-size: 25px !default
 $coffeebox-border: 3px solid rgba(0, 0, 0, 0) !default
 $coffeebox-border-radius: 5px !default
 
+@import "coffeebox_basic"
+
 #coffeebox
-  position: absolute
-  top: 0
-  left: 0
-  z-index: 100
-  text-align: left
-  .loading
-    width: 400px
-    height: 200px
-    position: relative
   .popup
-    position: relative
     border: $coffeebox-border
     border-radius: $coffeebox-border-radius
     box-shadow: 0 0 18px rgba(0, 0, 0, 0.4)
@@ -34,7 +26,6 @@ $coffeebox-border-radius: 5px !default
       &:last-child
         margin-bottom: 0
   .close
-    cursor: pointer
     position: absolute
     top: 5px
     right: 5px
@@ -53,15 +44,3 @@ $coffeebox-border-radius: 5px !default
     border: 0
     margin: 0
 
-#coffeebox_overlay
-  position: fixed
-  top: 0px
-  left: 0px
-  height: 100%
-  width: 100%
-  transition: opacity 0.3s ease
-  background-color: #000
-  z-index: 99
-  opacity: 0.4
-  &.hide
-    opacity: 0

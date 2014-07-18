@@ -7,7 +7,7 @@
 # 
 # Copyright (c) 2013 RocketScience.pro
 # 
-# Based on coffeebox: https://github.com/defunkt/coffeebox
+# Based on facebox: https://github.com/defunkt/facebox
 # Copyright Forever Chris Wanstrath, Kyle Neath
 
 $.fn.stopSpinner = ->

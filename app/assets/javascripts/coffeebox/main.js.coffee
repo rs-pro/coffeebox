@@ -51,13 +51,13 @@ $.extend $.coffeebox,
     overlay: true
     imageTypes: ["png", "jpg", "jpeg", "gif"]
     html: """
-        <div id="coffeebox" style="display:none;">
-          <div class="popup">
-            <div class="content"></div>
-            <a class="close">&times;</a>
-          </div>
-        </div>
-    """
+<div id="coffeebox" style="display:none;">
+  <div class="popup">
+    <div class="content"></div>
+    <a class="close">&times;</a>
+  </div>
+</div>
+"""
 
   loading: ->
     init()
@@ -85,11 +85,13 @@ $.extend $.coffeebox,
     init()
     showOverlay()
     $(document).trigger "beforeReveal.coffeebox"
-    $("#coffeebox .content").addClass klass if klass
+    $("#coffeebox").removeClass()
+    $("#coffeebox").addClass klass if klass
     $("#coffeebox .content").empty().append data
     $("#coffeebox .popup").children().fadeIn "normal"
     $(document).trigger("reveal.coffeebox").trigger "afterReveal.coffeebox"
     $.coffeebox.align()
+
   close: ->
     $(document).trigger "close.coffeebox"
     false
@@ -117,6 +119,7 @@ init = (settings) ->
   $(document).trigger "init.coffeebox"
   imageTypes = $.coffeebox.settings.imageTypes.join("|")
   $.coffeebox.settings.imageTypesRegexp = new RegExp("\\.(" + imageTypes + ")(\\?.*)?$", "i")
+  console.log settings
   $.extend $.coffeebox.settings, settings if settings
   $("body").append $.coffeebox.settings.html
   $("#coffeebox .close").click($.coffeebox.close)

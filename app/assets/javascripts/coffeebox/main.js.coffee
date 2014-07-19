@@ -119,7 +119,6 @@ init = (settings) ->
   $(document).trigger "init.coffeebox"
   imageTypes = $.coffeebox.settings.imageTypes.join("|")
   $.coffeebox.settings.imageTypesRegexp = new RegExp("\\.(" + imageTypes + ")(\\?.*)?$", "i")
-  console.log settings
   $.extend $.coffeebox.settings, settings if settings
   $("body").append $.coffeebox.settings.html
   $("#coffeebox .close").click($.coffeebox.close)

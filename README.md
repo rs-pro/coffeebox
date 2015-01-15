@@ -37,7 +37,7 @@ Require it in application.js
 
     //= require coffeebox
 
-Or in in application.js.coffe
+Or in application.js.coffee
 
     #= require coffeebox
 

@@ -77,7 +77,7 @@ $.extend $.coffeebox,
   align: ->
     $("#coffeebox").show().css
       top: getPageScroll()[1] + (getPageHeight() / 10)
-      left: $(window).width() / 2 - ($("#coffeebox .popup").outerWidth() / 2)
+      left: Math.max(document.documentElement.clientWidth, window.innerWidth || 0) / 2 - ($("#coffeebox .popup").outerWidth() / 2)
 
   reveal: (data, klass) ->
     if $("#coffebox .loading").length

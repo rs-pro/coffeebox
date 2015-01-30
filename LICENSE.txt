@@ -1,3 +1,4 @@
+Copyright (c) 2007-2010 Chris Wanstrath, Kyle Neath
 Copyright (c) 2013 glebtv
 
 MIT License

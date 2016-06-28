@@ -159,7 +159,7 @@ fillcoffeeboxFromHref = (href, klass) ->
   if href.match(/#/)
     url = window.location.href.split("#")[0]
     target = href.replace(url, "")
-    $.coffeebox.reveal $(target).html(), klass  if target is "#"
+    $.coffeebox.reveal $(target).html(), klass if target.indexOf("#") != -1
   
   # image
   else if href.match($.coffeebox.settings.imageTypesRegexp)

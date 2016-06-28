@@ -30,6 +30,8 @@ $.coffeebox = (data, klass) ->
   else if $.isFunction(data)
     $.coffeebox.loading()
     data.call $
+  else if data instanceof jQuery && data.length > 0 && $.contains(document, data[0])
+    $.coffeebox.reveal data.clone(), klass
   else
     $.coffeebox.reveal data, klass
 
